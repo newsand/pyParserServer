@@ -7,3 +7,18 @@ flask
 falsk-alchemy
 flask-restless
 sqlite  
+flask-requests
+
+accept json to post on body with raw JSON(application/json) 
+with format like 
+
+[
+  {
+    "text": "É fácil escrever código. Difícil é escrever código que funcione.",
+    "textname": "texto2.txt"
+  },
+  {
+    "text": "Falar é fácil. Mostre-me o código.",
+    "textname": "texto1.txt"
+  }
+]
