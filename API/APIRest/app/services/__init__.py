@@ -6,8 +6,8 @@ import re
 import pandas as pd
 
 def split_text(_text):
-    _text.lower()
-    words = re.split(' |\.',_text)
+    fulltext=_text.lower()
+    words = re.split('\s|(?<!\d)[,.-](?!\d)',fulltext)
     words = list(filter(None, words))
     return words
 
@@ -16,16 +16,16 @@ def filterUnique(_wordList):
     return unique
 
 def countWords(_uniqueSet,_fullSet):
+    result='['
     for word in _uniqueSet:
-        print (word,' : ',_fullSet.count(word))
-    return 'ok'
+        result+=str(_fullSet.count(word))+',' 
+    result = result[:-1]
+    result+= ']'
+    return result
 
+def getherTexts(_textList):
+    words=[]
+    for content in _textList:
+        words +=split_text(content['text'])
+    return words
 
-def split_2gram(_text):
-    # primalWords = split_text(_text)
-    # words2gram
-    return 'ok'
-
-
-def getx():
-    return  Texts.query.first()
