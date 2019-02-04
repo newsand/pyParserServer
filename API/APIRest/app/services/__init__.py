@@ -9,6 +9,8 @@ def split_text(_text):
     fulltext=_text.lower()
     words = re.split('\s|(?<!\d)[,.-](?!\d)',fulltext)
     words = list(filter(None, words))
+    stopwords={"o","a","que","os","as"}
+    words= set(words)-set(stopwords)
     return words
 
 def filterUnique(_wordList):

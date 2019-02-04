@@ -22,3 +22,9 @@ with format like
     "textname": "texto1.txt"
   }
 ]
+
+Running project
+
+go to dir: \pyParserServer\API\APIRest
+use the command 
+python run.py
